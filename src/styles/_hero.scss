@@ -1,0 +1,69 @@
+@use 'variables';
+
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        z-index: 1;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(40, 37, 37, 0.7); /* Ajuste a cor de fundo para melhor legibilidade */
+        z-index: 0;
+    }
+
+    &__text {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: bold;
+        text-align: center;
+        color: variables.$textColor; /* Ajuste a cor do texto */
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        z-index: -1;
+    }
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+
+        &__video {
+            height: auto;
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}
