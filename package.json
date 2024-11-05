@@ -1,5 +1,5 @@
 {
-  "name": "modulo-22---landing-page",
+  "name": "modulo-22",
   "version": "1.0.0",
   "scripts": {
     "dev": "parcel src/index.html src/styles/main.scss src/scripts/main.js",
